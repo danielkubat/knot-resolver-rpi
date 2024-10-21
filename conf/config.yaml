@@ -1,0 +1,9 @@
+rundir: /run/knot-resolver
+workers: 1
+cache:
+  storage: /var/cache/knot-resolver
+logging:
+  level: info
+network:
+  listen:
+    - interface: 0.0.0.0@53
