@@ -22,7 +22,7 @@ RUN apt-get update && apt-get install -y \
     knot-dnsutils \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* \
-    mkdir /config
+    && mkdir /conf
 
 COPY conf/config.yaml /conf/config.yaml
 
