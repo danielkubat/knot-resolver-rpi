@@ -1,5 +1,5 @@
 # Use Debian Bullseye as the base image
-FROM arm64v8/debian:bullseye
+FROM arm64v8/debian:bullseye-20241016
 
 # Set the SHELL to bash with pipefail option
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
