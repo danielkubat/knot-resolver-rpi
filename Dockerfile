@@ -24,10 +24,21 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/* \
     && mkdir /conf
 
-COPY conf/config.yaml /conf/config.yaml
+# Create necessary directories and set permissions
+RUN mkdir -p /run/knot-resolver \
+    && chown knot-resolver:knot-resolver /run/knot-resolver \
+    && chmod 775 /run/knot-resolver \
+    && chown knot-resolver:knot-resolver /conf
+
+# Copy configuration
+COPY --chown=knot-resolver:knot-resolver conf/config.yaml /conf/config.yaml
 
 # Expose plain DNS
 EXPOSE 53/UDP 53/TCP
 
+# Switch to knot-resolver user
+USER knot-resolver
+
+# Set entrypoint and default command
 ENTRYPOINT ["/usr/bin/knot-resolver"]
 CMD ["-c", "/conf/config.yaml"]
