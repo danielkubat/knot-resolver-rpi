@@ -45,4 +45,4 @@ The `config.yaml` file in the `conf` directory sets up basic configuration for K
 
 ## License
 
-This project is released under the Unlicense. See the LICENSE file for details.
+This project is released under the [Unlicense](LICENSE). See the [LICENSE](LICENSE) file for details.
