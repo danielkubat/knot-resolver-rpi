@@ -5,5 +5,6 @@ cache:
 logging:
   level: info
 network:
+  do-ipv6: false
   listen:
     - interface: 0.0.0.0@53
