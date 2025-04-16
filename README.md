@@ -39,6 +39,7 @@ docker run -d --name knot-resolver -p 53:53/udp -p 53:53/tcp knot-resolver-rpi
 The `config.yaml` file in the `conf` directory sets up basic configuration for Knot Resolver:
 
 - Listens on all interfaces (0.0.0.0) on port 53
+- Disable using IPv6 for contacting upstream nameservers
 - Uses 1 worker thread
 - Stores cache in `/var/cache/knot-resolver`
 - Sets logging level to "info"
