@@ -43,6 +43,7 @@ The `config.yaml` file in the `conf` directory sets up basic configuration for K
 - Uses 1 worker thread
 - Stores cache in `/var/cache/knot-resolver`
 - Sets logging level to "info"
+- Use [Open DNSSEC Validating Resolvers](https://www.nic.cz/odvr/) for forwarding (DoT)
 
 ## License
 
