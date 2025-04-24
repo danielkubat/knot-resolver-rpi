@@ -2,9 +2,18 @@ rundir: /run/knot-resolver
 workers: 1
 cache:
   storage: /var/cache/knot-resolver
+
 logging:
   level: info
+
 network:
   do-ipv6: false
   listen:
     - interface: 0.0.0.0@53
+
+forward:
+  - subtree: .
+    servers:
+      - address: [ 185.43.135.1, 193.17.47.1 ]
+        transport: tls
+        hostname: odvr.nic.cz
