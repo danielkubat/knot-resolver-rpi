@@ -18,7 +18,7 @@ RUN wget -O - https://pkg.labs.nic.cz/doc/scripts/enable-repo-cznic-labs.sh | ba
 
 # Install Knot resolver
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    knot-resolver6=6.0.11-cznic.1~bullseye \
+    knot-resolver6=6.0.14-cznic.1~bullseye \
     knot-dnsutils \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* \
